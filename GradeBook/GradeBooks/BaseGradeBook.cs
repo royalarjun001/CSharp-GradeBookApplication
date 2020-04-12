@@ -124,13 +124,10 @@ namespace GradeBook.GradeBooks
                 case 'D':
                     gpa = 1;
                     break;
-                case 'F':
-                    gpa = 0;
-                    break;
             }
 
-            if(IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.Honors))
-                gpa =+ 1;
+            if(IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
+                gpa++;
 
             return gpa;
         }
